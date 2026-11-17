@@ -9,8 +9,9 @@ Landing page estática pessoal inspirada na linguagem visual de interfaces do in
 - `script.js` — menu Iniciar, barra de tarefas, minimizar/maximizar/fechar janelas e relógio
 - `assets/vabi-atom.svg` — logo do vabi.dev
 - `assets/bliss.svg` — papel de parede
+- `assets/xp/` — XP.css, fontes e licença
 
-Não há backend nem dependências externas. Basta hospedar a pasta como um site estático.
+O frame das janelas (barra de título, botões e barra de status) usa o [XP.css](https://botoxparty.github.io/XP.css/) v0.2.6, licença MIT, incluído localmente em `assets/xp/`. Fora isso, não há backend nem dependências externas. Basta hospedar a pasta como um site estático.
 
 ## Projetos exibidos
 

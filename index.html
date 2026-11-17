@@ -11,6 +11,7 @@
   <meta property="og:url" content="https://vabi.dev">
   <title>vabi.dev</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/xp/XP.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -44,17 +45,12 @@
   <main class="workspace">
 
     <!-- Boas-vindas -->
-    <section class="win" id="inicio" data-title="Bem-vindo" data-icon="i-user" aria-labelledby="t-inicio">
-      <div class="titlebar">
-        <svg class="t-icon"><use href="#i-user"/></svg>
-        <h2 id="t-inicio">Bem-vindo</h2>
-        <div class="ctrl">
-          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
-          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
-          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-        </div>
+    <section class="window win" id="inicio" data-title="Bem-vindo" data-icon="i-user" aria-labelledby="t-inicio">
+      <div class="title-bar">
+        <div class="title-bar-text"><svg class="t-icon"><use href="#i-user"/></svg><h2 id="t-inicio">Bem-vindo</h2></div>
+        <div class="title-bar-controls"><button type="button" data-act="min" aria-label="Minimize" title="Minimizar"></button><button type="button" data-act="max" aria-label="Maximize" title="Maximizar"></button><button type="button" data-act="close" aria-label="Close" title="Fechar"></button></div>
       </div>
-      <div class="win-body welcome">
+      <div class="window-body welcome">
         <div class="welcome-side">
           <img src="assets/vabi-atom.svg" alt="Logo do vabi.dev: um átomo com três órbitas" width="132" height="132">
           <p>vabi.dev</p>
@@ -72,17 +68,12 @@
     </section>
 
     <!-- Bloco de notas -->
-    <section class="win" id="sobre" data-title="sobre.txt" data-icon="i-note" aria-labelledby="t-sobre">
-      <div class="titlebar">
-        <svg class="t-icon"><use href="#i-note"/></svg>
-        <h2 id="t-sobre">sobre.txt - Bloco de notas</h2>
-        <div class="ctrl">
-          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
-          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
-          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-        </div>
+    <section class="window win" id="sobre" data-title="sobre.txt" data-icon="i-note" aria-labelledby="t-sobre">
+      <div class="title-bar">
+        <div class="title-bar-text"><svg class="t-icon"><use href="#i-note"/></svg><h2 id="t-sobre">sobre.txt - Bloco de notas</h2></div>
+        <div class="title-bar-controls"><button type="button" data-act="min" aria-label="Minimize" title="Minimizar"></button><button type="button" data-act="max" aria-label="Maximize" title="Maximizar"></button><button type="button" data-act="close" aria-label="Close" title="Fechar"></button></div>
       </div>
-      <div class="win-body">
+      <div class="window-body">
         <div class="menubar" aria-hidden="true"><span>Arquivo</span><span>Editar</span><span>Formatar</span><span>Exibir</span><span>Ajuda</span></div>
         <div class="paper notepad">
 <p>Olá, eu sou o Vinicius.</p>
@@ -90,22 +81,17 @@
 <p>Sou curioso e prefiro aprender fazendo. Comecei a usar IA na prática em 2021 e, de lá para cá, tem sido minha principal ferramenta de pesquisa e de desenvolvimento.</p>
 <p>Moro no Brasil. Os projetos que mantenho estão na pasta ao lado, e quem quiser conversar pode me achar no GitHub.</p>
         </div>
-        <div class="statusbar"><span>Ln 1, Col 1</span><span>UTF-8</span></div>
+        <div class="status-bar"><p class="status-bar-field">Ln 1, Col 1</p><p class="status-bar-field">UTF-8</p></div>
       </div>
     </section>
 
     <!-- Explorer -->
-    <section class="win" id="projetos" data-title="Projetos" data-icon="i-folder" aria-labelledby="t-projetos">
-      <div class="titlebar">
-        <svg class="t-icon"><use href="#i-folder"/></svg>
-        <h2 id="t-projetos">Projetos</h2>
-        <div class="ctrl">
-          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
-          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
-          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-        </div>
+    <section class="window win" id="projetos" data-title="Projetos" data-icon="i-folder" aria-labelledby="t-projetos">
+      <div class="title-bar">
+        <div class="title-bar-text"><svg class="t-icon"><use href="#i-folder"/></svg><h2 id="t-projetos">Projetos</h2></div>
+        <div class="title-bar-controls"><button type="button" data-act="min" aria-label="Minimize" title="Minimizar"></button><button type="button" data-act="max" aria-label="Maximize" title="Maximizar"></button><button type="button" data-act="close" aria-label="Close" title="Fechar"></button></div>
       </div>
-      <div class="win-body">
+      <div class="window-body">
         <div class="menubar" aria-hidden="true"><span>Arquivo</span><span>Editar</span><span>Exibir</span><span>Favoritos</span><span>Ajuda</span></div>
         <div class="addressbar"><span>Endereço</span><div><svg><use href="#i-folder"/></svg>C:\vabi\projetos</div></div>
         <div class="explorer">
@@ -159,22 +145,17 @@
             </table>
           </div>
         </div>
-        <div class="statusbar"><span>5 objetos</span><span>Meu computador</span></div>
+        <div class="status-bar"><p class="status-bar-field">5 objetos</p><p class="status-bar-field">Meu computador</p></div>
       </div>
     </section>
 
     <!-- Adicionar/Remover programas -->
-    <section class="win" id="ferramentas" data-title="Ferramentas" data-icon="i-gear" aria-labelledby="t-ferramentas">
-      <div class="titlebar">
-        <svg class="t-icon"><use href="#i-gear"/></svg>
-        <h2 id="t-ferramentas">Ferramentas instaladas</h2>
-        <div class="ctrl">
-          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
-          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
-          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-        </div>
+    <section class="window win" id="ferramentas" data-title="Ferramentas" data-icon="i-gear" aria-labelledby="t-ferramentas">
+      <div class="title-bar">
+        <div class="title-bar-text"><svg class="t-icon"><use href="#i-gear"/></svg><h2 id="t-ferramentas">Ferramentas instaladas</h2></div>
+        <div class="title-bar-controls"><button type="button" data-act="min" aria-label="Minimize" title="Minimizar"></button><button type="button" data-act="max" aria-label="Maximize" title="Maximizar"></button><button type="button" data-act="close" aria-label="Close" title="Fechar"></button></div>
       </div>
-      <div class="win-body">
+      <div class="window-body">
         <p class="tools-intro">O que uso no dia a dia, do front-end à automação.</p>
         <div class="listing">
           <table>
@@ -192,21 +173,17 @@
             </tbody>
           </table>
         </div>
-        <div class="statusbar"><span>9 programas</span></div>
+        <div class="status-bar"><p class="status-bar-field">9 programas</p></div>
       </div>
     </section>
 
     <!-- Diálogo de contato -->
-    <section class="win dialog" id="contato" data-title="Contato" data-icon="i-mail" aria-labelledby="t-contato">
-      <div class="titlebar">
-        <svg class="t-icon"><use href="#i-mail"/></svg>
-        <h2 id="t-contato">Contato</h2>
-        <div class="ctrl">
-          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
-          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
-        </div>
+    <section class="window win dialog" id="contato" data-title="Contato" data-icon="i-mail" aria-labelledby="t-contato">
+      <div class="title-bar">
+        <div class="title-bar-text"><svg class="t-icon"><use href="#i-mail"/></svg><h2 id="t-contato">Contato</h2></div>
+        <div class="title-bar-controls"><button type="button" data-act="min" aria-label="Minimize" title="Minimizar"></button><button type="button" data-act="close" aria-label="Close" title="Fechar"></button></div>
       </div>
-      <div class="win-body">
+      <div class="window-body">
         <div class="dialog-main">
           <svg class="dialog-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="url(#g-blue)" stroke="#0a3ba8"/><path d="M14 13h4v10h-4z" fill="#fff"/><circle cx="16" cy="9" r="2.2" fill="#fff"/></svg>
           <div>
