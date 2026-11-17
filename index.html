@@ -3,186 +3,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#1776dc">
+  <meta name="theme-color" content="#245edb">
   <meta name="description" content="Vabi.dev — projetos, desenvolvimento e tecnologia por Vinicius.">
   <meta property="og:title" content="vabi.dev — projetos e desenvolvimento">
   <meta property="og:description" content="Meu canto da internet: projetos, ideias e tecnologia.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vabi.dev">
   <title>vabi.dev</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="sky" aria-hidden="true">
-    <span class="cloud cloud-a"></span>
-    <span class="cloud cloud-b"></span>
-    <span class="cloud cloud-c"></span>
-    <span class="hill hill-a"></span>
-    <span class="hill hill-b"></span>
-  </div>
+  <!-- Ícones usados em toda a página -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-folder" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe9a0"/><stop offset="1" stop-color="#e8b93c"/></linearGradient>
+      <linearGradient id="g-paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#dfe7f5"/></linearGradient>
+      <linearGradient id="g-blue" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fb1ff"/><stop offset="1" stop-color="#1558d6"/></linearGradient>
+      <linearGradient id="g-green" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fd35a"/><stop offset="1" stop-color="#2e8b1f"/></linearGradient>
+    </defs>
+    <symbol id="i-folder" viewBox="0 0 32 32"><path d="M2 8a2 2 0 0 1 2-2h8l3 3h13a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z" fill="url(#g-folder)" stroke="#a97d12"/><path d="M2 13h28" stroke="#fff6cf" opacity=".8"/></symbol>
+    <symbol id="i-note" viewBox="0 0 32 32"><path d="M7 3h14l5 5v21H7z" fill="url(#g-paper)" stroke="#6f84a8"/><path d="M21 3v5h5" fill="#c6d3ea" stroke="#6f84a8"/><path d="M10 14h13M10 18h13M10 22h9" stroke="#4a64a0"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 32 32"><path d="M14 3h4l1 4 3 1 3-2 3 3-2 3 1 3 4 1v4l-4 1-1 3 2 3-3 3-3-2-3 1-1 4h-4l-1-4-3-1-3 2-3-3 2-3-1-3-4-1v-4l4-1 1-3-2-3 3-3 3 2 3-1z" fill="#c9d3e2" stroke="#5d6f8f"/><circle cx="16" cy="16" r="5" fill="#fff" stroke="#5d6f8f"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="2" fill="url(#g-paper)" stroke="#5d6f8f"/><path d="m4 9 12 9 12-9" fill="none" stroke="#5d6f8f"/></symbol>
+    <symbol id="i-user" viewBox="0 0 32 32"><rect x="2" y="2" width="28" height="28" rx="3" fill="url(#g-blue)" stroke="#0a3ba8"/><circle cx="16" cy="13" r="5" fill="#fff"/><path d="M6 28c1-6 5-8 10-8s9 2 10 8z" fill="#fff"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 32 32"><circle cx="16" cy="16" r="13" fill="url(#g-blue)" stroke="#0a3ba8"/><path d="M8 10c3-2 6 0 7 3s-3 3-3 6-4 2-5-1-3-6 1-8zM20 7c3 1 6 4 6 8-2 0-3 2-5 1s0-4-2-5z" fill="url(#g-green)"/></symbol>
+    <symbol id="i-start" viewBox="0 0 32 32"><path d="M3 6c4-2 7-1 10 0v9c-3-1-6-2-10 0zM15 6c4 1 8 2 12 0v9c-4 2-8 1-12 0zM3 17c4-2 7-1 10 0v9c-3-1-6-2-10 0zM15 17c4 1 8 2 12 0v9c-4 2-8 1-12 0z" fill="#fff"/></symbol>
+  </svg>
 
-  <div class="site-shell" id="inicio">
-    <header class="launcher glass-panel">
-      <a class="brand" href="#inicio" aria-label="vabi.dev — início">
-        <img src="assets/vabi-atom.svg" alt="" width="38" height="38">
-        <strong>vabi.dev</strong>
-      </a>
-      <nav class="launcher-nav" aria-label="Navegação principal">
-        <a href="#inicio" class="active"><span aria-hidden="true">⌂</span> Início</a>
-        <a href="#sobre"><span aria-hidden="true">●</span> Sobre</a>
-        <a href="#projetos"><span aria-hidden="true">▣</span> Projetos</a>
-        <a href="#ferramentas"><span aria-hidden="true">⚙</span> Ferramentas</a>
-        <a href="#contato"><span aria-hidden="true">✉</span> Contato</a>
-      </nav>
-      <button class="mobile-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      <div class="window-controls" aria-hidden="true"><span>—</span><span>□</span><span class="close">×</span></div>
-    </header>
+  <div class="wallpaper" aria-hidden="true"></div>
 
-    <nav class="mobile-menu glass-panel" aria-label="Navegação móvel" hidden>
-      <a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#ferramentas">Ferramentas</a><a href="#contato">Contato</a>
-    </nav>
+  <nav class="desktop-icons" aria-label="Atalhos da área de trabalho">
+    <a href="#projetos"><svg><use href="#i-folder"/></svg><span>Projetos</span></a>
+    <a href="#sobre"><svg><use href="#i-note"/></svg><span>sobre.txt</span></a>
+    <a href="#ferramentas"><svg><use href="#i-gear"/></svg><span>Ferramentas</span></a>
+    <a href="#contato"><svg><use href="#i-mail"/></svg><span>Contato</span></a>
+    <a href="https://github.com/vabidev" target="_blank" rel="noreferrer"><svg><use href="#i-globe"/></svg><span>GitHub</span></a>
+  </nav>
 
-    <main>
-      <section class="window hero-window">
-        <div class="titlebar">
-          <div class="titlebar-title"><img src="assets/vabi-atom.svg" alt="" width="25" height="25"><span>vabi.dev — Bem-vindo(a)</span></div>
-          <div class="window-controls" aria-hidden="true"><span>—</span><span>□</span><span class="close">×</span></div>
+  <main class="workspace">
+
+    <!-- Boas-vindas -->
+    <section class="win" id="inicio" data-title="Bem-vindo" data-icon="i-user" aria-labelledby="t-inicio">
+      <div class="titlebar">
+        <svg class="t-icon"><use href="#i-user"/></svg>
+        <h2 id="t-inicio">Bem-vindo</h2>
+        <div class="ctrl">
+          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
+          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
+          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
         </div>
-        <div class="window-body hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">MEU CANTO DA INTERNET</p>
-            <h1>Eu transformo ideias em <span>coisas úteis.</span></h1>
-            <p>Sou o Vinicius, desenvolvedor e estudante. Gosto de tecnologia, sou meio agitado, vivo com várias ideias na cabeça e adoro resolver problemas reais com código.</p>
-            <p>Trabalho com Inteligência Artificial na prática desde 2021 e, desde então, venho construindo projetos que realmente fazem sentido.</p>
-            <div class="hero-actions">
-              <a class="xp-button primary" href="#projetos"><span>▶</span> Ver projetos</a>
-              <a class="xp-button" href="https://github.com/vabidev" target="_blank" rel="noreferrer"><span>◉</span> GitHub</a>
-            </div>
+      </div>
+      <div class="win-body welcome">
+        <div class="welcome-side">
+          <img src="assets/vabi-atom.svg" alt="Logo do vabi.dev: um átomo com três órbitas" width="132" height="132">
+          <p>vabi.dev</p>
+        </div>
+        <div class="welcome-main">
+          <h1>Eu transformo ideias em coisas úteis.</h1>
+          <p>Sou o Vinicius, desenvolvedor e estudante. Gosto de tecnologia, sou meio agitado, vivo com várias ideias na cabeça e adoro resolver problemas reais com código.</p>
+          <p>Trabalho com Inteligência Artificial na prática desde 2021 e, desde então, venho construindo projetos que fazem sentido.</p>
+          <div class="btn-row">
+            <a class="btn default" href="#projetos">Ver projetos</a>
+            <a class="btn" href="https://github.com/vabidev" target="_blank" rel="noreferrer">Abrir o GitHub</a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <aside class="profile-card inner-window" aria-label="Resumo pessoal">
-            <div class="mini-titlebar"><span>Meu sistema</span><span aria-hidden="true">□ ×</span></div>
-            <div class="profile-content">
-              <div class="profile-head">
-                <div class="profile-logo"><img src="assets/vabi-atom.svg" alt="Logo atômica do vabi.dev"></div>
-                <div><strong>Vinicius</strong><span>Desenvolvedor</span><em><i></i> Online</em></div>
-              </div>
-              <dl class="profile-stats">
-                <div><dt>Localização</dt><dd>Brasil 🇧🇷</dd></div>
-                <div><dt>Foco atual</dt><dd>Projetos e IA</dd></div>
-                <div><dt>Desde</dt><dd>2021</dd></div>
-                <div><dt>Modo</dt><dd>Sempre aprendendo</dd></div>
-                <div><dt>Status</dt><dd>Agitado, mas produtivo!</dd></div>
-              </dl>
+    <!-- Bloco de notas -->
+    <section class="win" id="sobre" data-title="sobre.txt" data-icon="i-note" aria-labelledby="t-sobre">
+      <div class="titlebar">
+        <svg class="t-icon"><use href="#i-note"/></svg>
+        <h2 id="t-sobre">sobre.txt - Bloco de notas</h2>
+        <div class="ctrl">
+          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
+          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
+          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="menubar" aria-hidden="true"><span>Arquivo</span><span>Editar</span><span>Formatar</span><span>Exibir</span><span>Ajuda</span></div>
+        <div class="paper notepad">
+<p>Olá, eu sou o Vinicius.</p>
+<p>Estudo, desenvolvo e gosto de resolver problemas com tecnologia: automação, Inteligência Artificial, interfaces e tudo que dê para transformar em produto de verdade.</p>
+<p>Sou curioso e prefiro aprender fazendo. Comecei a usar IA na prática em 2021 e, de lá para cá, tem sido minha principal ferramenta de pesquisa e de desenvolvimento.</p>
+<p>Moro no Brasil. Os projetos que mantenho estão na pasta ao lado, e quem quiser conversar pode me achar no GitHub.</p>
+        </div>
+        <div class="statusbar"><span>Ln 1, Col 1</span><span>UTF-8</span></div>
+      </div>
+    </section>
+
+    <!-- Explorer -->
+    <section class="win" id="projetos" data-title="Projetos" data-icon="i-folder" aria-labelledby="t-projetos">
+      <div class="titlebar">
+        <svg class="t-icon"><use href="#i-folder"/></svg>
+        <h2 id="t-projetos">Projetos</h2>
+        <div class="ctrl">
+          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
+          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
+          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="menubar" aria-hidden="true"><span>Arquivo</span><span>Editar</span><span>Exibir</span><span>Favoritos</span><span>Ajuda</span></div>
+        <div class="addressbar"><span>Endereço</span><div><svg><use href="#i-folder"/></svg>C:\vabi\projetos</div></div>
+        <div class="explorer">
+          <aside class="taskpane">
+            <div class="pane-box">
+              <h3>Detalhes</h3>
+              <p><strong>Projetos</strong><br>Pasta de arquivos</p>
+              <p>5 objetos<br>3 públicos, 2 privados</p>
+            </div>
+            <div class="pane-box">
+              <h3>Outros locais</h3>
+              <a href="https://github.com/vabidev" target="_blank" rel="noreferrer"><svg><use href="#i-globe"/></svg>GitHub</a>
+              <a href="#contato"><svg><use href="#i-mail"/></svg>Contato</a>
             </div>
           </aside>
-        </div>
-      </section>
-
-      <section class="window" id="sobre">
-        <div class="titlebar">
-          <div class="titlebar-title"><span class="title-icon">👥</span><span>Sobre mim</span></div>
-          <div class="window-controls" aria-hidden="true"><span>—</span><span>□</span><span class="close">×</span></div>
-        </div>
-        <div class="window-body about-grid">
-          <div class="about-copy">
-            <h2>Olá! Eu sou o Vinicius</h2>
-            <p class="subtitle">Estudante, desenvolvedor e entusiasta de tecnologia.</p>
-            <p>Gosto de desenvolvimento, automação, Inteligência Artificial, interfaces e de transformar ideias em produtos reais.</p>
-            <p>Sou curioso, gosto de aprender e de colocar a mão na massa. Aqui você vai encontrar alguns dos meus projetos, ferramentas que uso e formas de entrar em contato.</p>
-            <blockquote>“Tecnologia é mais legal quando resolve problemas reais e melhora a vida das pessoas.”</blockquote>
+          <div class="listing">
+            <table>
+              <thead><tr><th scope="col">Nome</th><th scope="col">O que é</th><th scope="col">Acesso</th><th scope="col">Links</th></tr></thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><svg><use href="#i-folder"/></svg>Nexumpedia</th>
+                  <td data-l="O que é">Enciclopédia com identidade própria, publicação controlada e foco em leitura agradável.</td>
+                  <td data-l="Acesso">Público</td>
+                  <td data-l="Links"><a href="https://github.com/vabidev/Nexumpedia" target="_blank" rel="noreferrer">Código</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><svg><use href="#i-folder"/></svg>Lar Feliz Animal</th>
+                  <td data-l="O que é">Plataforma de adoção que conecta animais, adotantes e abrigos, com busca, favoritos e candidaturas.</td>
+                  <td data-l="Acesso">Público, no ar</td>
+                  <td data-l="Links"><a href="https://lar-feliz-animal.vercel.app" target="_blank" rel="noreferrer">Site</a> <a href="https://github.com/vabidev/lar-feliz-animal" target="_blank" rel="noreferrer">Código</a></td>
+                </tr>
+                <tr>
+                  <th scope="row"><svg><use href="#i-folder"/></svg>Fila Zero</th>
+                  <td data-l="O que é">Reduz filas e organiza atendimentos. Hoje é mantido como edição open source.</td>
+                  <td data-l="Acesso">Público</td>
+                  <td data-l="Links"><a href="https://github.com/vabidev/FilaZero" target="_blank" rel="noreferrer">Código</a></td>
+                </tr>
+                <tr class="locked">
+                  <th scope="row"><svg><use href="#i-folder"/></svg>SINEP</th>
+                  <td data-l="O que é">Sistema integrado de gestão escolar para aproximar gestão, professores, estudantes e responsáveis.</td>
+                  <td data-l="Acesso">Privado</td>
+                  <td data-l="Links">Sem link público</td>
+                </tr>
+                <tr class="locked">
+                  <th scope="row"><svg><use href="#i-folder"/></svg>OrbisLink</th>
+                  <td data-l="O que é">Projeto experimental de comunicação local, transferência, segmentação e integração entre dispositivos.</td>
+                  <td data-l="Acesso">Privado</td>
+                  <td data-l="Links">Sem link público</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="numbers inner-window">
-            <div class="mini-titlebar"><span>Alguns números</span><span aria-hidden="true">□ ×</span></div>
-            <div class="number-grid">
-              <article><b>⌘</b><strong>5+</strong><span>Projetos</span><small>Pessoais e em parceria</small></article>
-              <article><b>▣</b><strong>Estudante</strong><span>sempre aprendendo</span><small>e colocando em prática</small></article>
-              <article><b>⚡</b><strong>Desde 2021</strong><span>IA na prática</span><small>pesquisa e desenvolvimento</small></article>
-              <article><b>▥</b><strong>Foco</strong><span>Desenvolvimento</span><small>Automação · IA · Interfaces</small></article>
-            </div>
+        </div>
+        <div class="statusbar"><span>5 objetos</span><span>Meu computador</span></div>
+      </div>
+    </section>
+
+    <!-- Adicionar/Remover programas -->
+    <section class="win" id="ferramentas" data-title="Ferramentas" data-icon="i-gear" aria-labelledby="t-ferramentas">
+      <div class="titlebar">
+        <svg class="t-icon"><use href="#i-gear"/></svg>
+        <h2 id="t-ferramentas">Ferramentas instaladas</h2>
+        <div class="ctrl">
+          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
+          <button type="button" data-act="max" aria-label="Maximizar"><svg viewBox="0 0 10 10"><path d="M1.5 1.5h7v7h-7z" fill="none" stroke="#fff" stroke-width="1.4"/><path d="M1 1h8v2H1z" fill="#fff"/></svg></button>
+          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+      </div>
+      <div class="win-body">
+        <p class="tools-intro">O que uso no dia a dia, do front-end à automação.</p>
+        <div class="listing">
+          <table>
+            <thead><tr><th scope="col">Programa</th><th scope="col">Para que uso</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">HTML</th><td data-l="Para que uso">Estrutura das páginas</td></tr>
+              <tr><th scope="row">CSS</th><td data-l="Para que uso">Estilos e layouts responsivos</td></tr>
+              <tr><th scope="row">JavaScript</th><td data-l="Para que uso">Interatividade no navegador</td></tr>
+              <tr><th scope="row">TypeScript</th><td data-l="Para que uso">Aplicações que precisam crescer sem quebrar</td></tr>
+              <tr><th scope="row">Node.js</th><td data-l="Para que uso">Back-end e APIs</td></tr>
+              <tr><th scope="row">Git</th><td data-l="Para que uso">Controle de versão</td></tr>
+              <tr><th scope="row">IA aplicada</th><td data-l="Para que uso">Modelos, integração e automação</td></tr>
+              <tr><th scope="row">Automação</th><td data-l="Para que uso">Tirar tarefas repetitivas do caminho</td></tr>
+              <tr><th scope="row">UI/UX e prototipagem</th><td data-l="Para que uso">Testar uma ideia antes de construir</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="statusbar"><span>9 programas</span></div>
+      </div>
+    </section>
+
+    <!-- Diálogo de contato -->
+    <section class="win dialog" id="contato" data-title="Contato" data-icon="i-mail" aria-labelledby="t-contato">
+      <div class="titlebar">
+        <svg class="t-icon"><use href="#i-mail"/></svg>
+        <h2 id="t-contato">Contato</h2>
+        <div class="ctrl">
+          <button type="button" data-act="min" aria-label="Minimizar"><svg viewBox="0 0 10 10"><rect x="1" y="7" width="6" height="2" fill="#fff"/></svg></button>
+          <button type="button" data-act="close" class="x" aria-label="Fechar"><svg viewBox="0 0 10 10"><path d="m2 2 6 6M8 2 2 8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="dialog-main">
+          <svg class="dialog-icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="url(#g-blue)" stroke="#0a3ba8"/><path d="M14 13h4v10h-4z" fill="#fff"/><circle cx="16" cy="9" r="2.2" fill="#fff"/></svg>
+          <div>
+            <h3>Quer conversar?</h3>
+            <p>Estou aberto a falar de projetos, ideias, oportunidades ou só de tecnologia. O caminho mais direto é o GitHub: abra uma issue ou mande mensagem por lá.</p>
           </div>
         </div>
-      </section>
-
-      <section class="window projects-window" id="projetos">
-        <div class="titlebar">
-          <div class="titlebar-title"><span class="title-icon">📁</span><span>Meus Projetos</span></div>
-          <div class="titlebar-note">Alguns projetos que desenvolvi ou estou desenvolvendo:</div>
-          <div class="window-controls" aria-hidden="true"><span>—</span><span>□</span><span class="close">×</span></div>
+        <div class="btn-row dialog-btns">
+          <a class="btn default" href="https://github.com/vabidev" target="_blank" rel="noreferrer">Abrir o GitHub</a>
+          <a class="btn" href="#projetos">Ver projetos</a>
         </div>
-        <div class="window-body project-grid">
-          <article class="project-card">
-            <div class="project-icon book">📖</div>
-            <div class="project-main"><h3>Nexumpedia</h3><p>Enciclopédia com identidade própria, publicação controlada e foco em leitura agradável.</p><div class="tags"><span>Público</span><span>Open source</span></div></div>
-            <a class="project-link" href="https://github.com/vabidev/Nexumpedia" target="_blank" rel="noreferrer">Ver projeto ↗</a>
-          </article>
+      </div>
+    </section>
 
-          <article class="project-card">
-            <div class="project-icon paw">🐾</div>
-            <div class="project-main"><h3>Lar Feliz Animal</h3><p>Plataforma de adoção que conecta animais, adotantes e abrigos, com busca, favoritos e candidaturas.</p><div class="tags"><span>Público</span><span>Open source</span></div></div>
-            <div class="project-links"><a class="project-link" href="https://lar-feliz-animal.vercel.app" target="_blank" rel="noreferrer">Abrir site ↗</a><a class="project-link" href="https://github.com/vabidev/lar-feliz-animal" target="_blank" rel="noreferrer">Código ↗</a></div>
-          </article>
+  </main>
 
-          <article class="project-card">
-            <div class="project-icon plus">✚</div>
-            <div class="project-main"><h3>Fila Zero</h3><p>Projeto voltado a reduzir filas e organizar atendimentos; hoje mantido como edição open source.</p><div class="tags"><span>Público</span><span>Open source</span></div></div>
-            <a class="project-link" href="https://github.com/vabidev/FilaZero" target="_blank" rel="noreferrer">Ver projeto ↗</a>
-          </article>
-
-          <article class="project-card wide compact">
-            <div class="project-icon school">🏫</div>
-            <div class="project-main"><h3>SINEP</h3><p>Sistema integrado de gestão escolar para aproximar gestão, professores, estudantes e responsáveis.</p><div class="tags"><span class="private">🔒 Repositório privado</span></div></div>
-          </article>
-
-          <article class="project-card wide compact spacey">
-            <div class="project-icon globe">◎</div>
-            <div class="project-main"><h3>OrbisLink</h3><p>Projeto experimental envolvendo comunicação local, transferência, segmentação e integração entre dispositivos.</p><div class="tags"><span class="private">🔒 Repositório privado</span></div></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="window" id="ferramentas">
-        <div class="titlebar">
-          <div class="titlebar-title"><span class="title-icon">⚙</span><span>Ferramentas e Tecnologias</span></div>
-          <div class="titlebar-note">Ferramentas que uso no dia a dia:</div>
-          <div class="window-controls" aria-hidden="true"><span>—</span><span>□</span><span class="close">×</span></div>
-        </div>
-        <div class="window-body tools-grid">
-          <article><b>🖥️</b><div><strong>Front-end</strong><span>Interfaces modernas e responsivas</span></div></article>
-          <article><b>HTML</b><div><strong>HTML</strong><span>Estrutura da web</span></div></article>
-          <article><b>CSS</b><div><strong>CSS</strong><span>Estilos e layouts</span></div></article>
-          <article><b>JS</b><div><strong>JavaScript</strong><span>Interatividade</span></div></article>
-          <article><b>TS</b><div><strong>TypeScript</strong><span>Aplicações escaláveis</span></div></article>
-          <article><b>NODE</b><div><strong>Node.js</strong><span>Back-end e APIs</span></div></article>
-          <article><b>◈</b><div><strong>Git</strong><span>Controle de versão</span></div></article>
-          <article><b>🎨</b><div><strong>UI/UX</strong><span>Interfaces que fazem sentido</span></div></article>
-          <article><b>⚛</b><div><strong>IA aplicada</strong><span>Modelos, integração e automação</span></div></article>
-          <article><b>▧</b><div><strong>Prototipagem</strong><span>Ideias virando realidade</span></div></article>
-          <article><b>⚙</b><div><strong>Automação</strong><span>Processos mais simples e eficientes</span></div></article>
-        </div>
-      </section>
-
-      <section class="window contact-window" id="contato">
-        <div class="titlebar">
-          <div class="titlebar-title"><span class="title-icon">✉</span><span>Vamos conversar?</span></div>
-          <div class="titlebar-note">Ideias · Código · Projetos</div>
-          <div class="window-controls" aria-hidden="true"><span>—</span><span>□</span><span class="close">×</span></div>
-        </div>
-        <div class="window-body contact-grid">
-          <div><h2>Entre em contato</h2><p>Estou sempre aberto a conversar sobre projetos, ideias, oportunidades ou simplesmente trocar uma ideia sobre tecnologia.</p></div>
-          <div class="contact-buttons"><a class="xp-button primary" href="https://github.com/vabidev" target="_blank" rel="noreferrer">◉ Abrir meu GitHub</a><a class="xp-button" href="#projetos">📁 Ver projetos</a></div>
-          <div class="scribble" aria-hidden="true">Boas ideias<br>sempre são<br>bem-vindas!<br><span>☺</span></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="taskbar glass-panel">
-      <a class="brand" href="#inicio"><img src="assets/vabi-atom.svg" alt="" width="36" height="36"><strong>vabi.dev</strong></a>
-      <div class="task-links"><span>Ideias</span><span>•</span><span>Código</span><span>•</span><span>Projetos</span><span>•</span><span>Vida real</span></div>
-      <div class="tray"><span>◔</span><span>▮</span><span>◖</span><strong id="year"></strong><small>Sempre em construção...</small></div>
-    </footer>
+  <!-- Menu Iniciar -->
+  <div class="start-menu" id="start-menu" hidden>
+    <div class="sm-head"><img src="assets/vabi-atom.svg" alt="" width="40" height="40"><strong>Vinicius</strong></div>
+    <div class="sm-body">
+      <ul class="sm-left">
+        <li><a href="#inicio"><svg><use href="#i-user"/></svg>Bem-vindo</a></li>
+        <li><a href="#projetos"><svg><use href="#i-folder"/></svg>Projetos</a></li>
+        <li><a href="#sobre"><svg><use href="#i-note"/></svg>sobre.txt</a></li>
+        <li><a href="#ferramentas"><svg><use href="#i-gear"/></svg>Ferramentas</a></li>
+        <li><a href="#contato"><svg><use href="#i-mail"/></svg>Contato</a></li>
+      </ul>
+      <ul class="sm-right">
+        <li><a href="https://github.com/vabidev" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="https://lar-feliz-animal.vercel.app" target="_blank" rel="noreferrer">Lar Feliz Animal</a></li>
+        <li><a href="https://github.com/vabidev/Nexumpedia" target="_blank" rel="noreferrer">Nexumpedia</a></li>
+        <li><a href="https://github.com/vabidev/FilaZero" target="_blank" rel="noreferrer">Fila Zero</a></li>
+      </ul>
+    </div>
   </div>
+
+  <!-- Barra de tarefas -->
+  <footer class="taskbar">
+    <button type="button" class="start-btn" id="start-btn" aria-expanded="false" aria-controls="start-menu"><svg><use href="#i-start"/></svg><span>iniciar</span></button>
+    <div class="tasks" id="tasks" role="toolbar" aria-label="Janelas abertas"></div>
+    <div class="tray"><time id="clock"></time></div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
