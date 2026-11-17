@@ -53,14 +53,18 @@ function openWin(win, scroll = true) {
 
 /* ---------- Botões da janela ---------- */
 wins.forEach(win => {
-  win.querySelector('.titlebar').addEventListener('dblclick', e => {
-    if (e.target.closest('.ctrl')) return;
+  win.querySelector('.title-bar').addEventListener('dblclick', e => {
+    if (e.target.closest('.title-bar-controls')) return;
     setCollapsed(win, !win.classList.contains('collapsed'));
   });
-  win.querySelectorAll('.ctrl button').forEach(b => b.addEventListener('click', () => {
+  win.querySelectorAll('.title-bar-controls button').forEach(b => b.addEventListener('click', () => {
     const act = b.dataset.act;
     if (act === 'min') setCollapsed(win, !win.classList.contains('collapsed'));
-    if (act === 'max') win.classList.toggle('max');
+    if (act === 'max') {
+      const on = win.classList.toggle('max');
+      b.setAttribute('aria-label', on ? 'Restore' : 'Maximize');
+      b.title = on ? 'Restaurar' : 'Maximizar';
+    }
     if (act === 'close') { win.hidden = true; win.classList.remove('active'); sync(win); }
   }));
   win.addEventListener('pointerdown', () => setActive(win));
