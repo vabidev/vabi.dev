@@ -4,10 +4,11 @@ Landing page estática pessoal inspirada na linguagem visual de interfaces do in
 
 ## Estrutura
 
-- `index.html` — conteúdo da landing page
-- `styles.css` — identidade visual, responsividade e componentes
-- `script.js` — menu móvel, navegação ativa e ano automático
+- `index.html` — conteúdo, organizado como janelas de um desktop (Bem-vindo, Bloco de notas, Explorer, Programas, diálogo de contato)
+- `styles.css` — visual Luna/XP, responsividade e componentes
+- `script.js` — menu Iniciar, barra de tarefas, minimizar/maximizar/fechar janelas e relógio
 - `assets/vabi-atom.svg` — logo do vabi.dev
+- `assets/bliss.svg` — papel de parede
 
 Não há backend nem dependências externas. Basta hospedar a pasta como um site estático.
 
