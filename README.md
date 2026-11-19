@@ -1,22 +1,13 @@
 # vabi.dev
 
-Landing page estática pessoal inspirada na linguagem visual de interfaces do início dos anos 2000, especialmente no clima do Windows XP e do Windows 7, reinterpretada para a web atual.
+A single-screen personal presentation page for Vinicius: full-bleed looping background video, retro dot-matrix headline and a few numbers about me. Find me on Discord: **@VABIMS**.
 
-## Estrutura
+## Structure
 
-- `index.html` — conteúdo, organizado como janelas de um desktop (Bem-vindo, Bloco de notas, Explorer, Programas, diálogo de contato)
-- `styles.css` — visual Luna/XP, responsividade e componentes
-- `script.js` — menu Iniciar, barra de tarefas, minimizar/maximizar/fechar janelas e relógio
-- `assets/vabi-atom.svg` — logo do vabi.dev
-- `assets/bliss.svg` — papel de parede
-- `assets/xp/` — XP.css, fontes e licença
+- `index.html` — header, hero and stats over the background video
+- `styles.css` — layout, entrance animations, mobile menu and breakpoints
+- `main.js` — mobile menu, stats count-up, copy-Discord-handle toast
+- `assets/logo.webp` — vabi.dev atom logo
+- `fonts/GeistPixel-Circle.woff2` — fallback display font (Geist, SIL OFL)
 
-O frame das janelas (barra de título, botões e barra de status) usa o [XP.css](https://botoxparty.github.io/XP.css/) v0.2.6, licença MIT, incluído localmente em `assets/xp/`. Fora isso, não há backend nem dependências externas. Basta hospedar a pasta como um site estático.
-
-## Projetos exibidos
-
-- Nexumpedia — repositório público
-- Lar Feliz Animal — repositório público e aplicação publicada
-- Fila Zero — repositório público
-- SINEP — repositório privado
-- OrbisLink — repositório privado
+Fonts and icons load from CDNs: Inter (Google Fonts), BubbledotICG-FinePos (OnlineWebFonts) and Font Awesome 6.5.2 (cdnjs). No build step: host the folder as a static site.
