@@ -1,22 +1,20 @@
 # vabi.dev
 
-Landing page estática pessoal inspirada na linguagem visual de interfaces do início dos anos 2000, especialmente no clima do Windows XP e do Windows 7, reinterpretada para a web atual.
+Landing page pessoal do Vinicius: escura, cósmica e cheia de movimento, com roxo profundo, cristais flutuantes, estrela cromada e um planeta brilhando atrás do nome.
 
 ## Estrutura
 
-- `index.html` — conteúdo, organizado como janelas de um desktop (Bem-vindo, Bloco de notas, Explorer, Programas, diálogo de contato)
-- `styles.css` — visual Luna/XP, responsividade e componentes
-- `script.js` — menu Iniciar, barra de tarefas, minimizar/maximizar/fechar janelas e relógio
-- `assets/vabi-atom.svg` — logo do vabi.dev
-- `assets/bliss.svg` — papel de parede
-- `assets/xp/` — XP.css, fontes e licença
+- `index.html` — conteúdo: hero, Sobre, Projetos, Stack e Contato (Discord @VABIMS)
+- `styles.css` — identidade visual, animações e responsividade
+- `script.js` — céu estrelado em canvas, parallax, revelação ao rolar, contadores, cards com inclinação, botões magnéticos, menu mobile, copiar o Discord e relógio de Brasília
+- `assets/vabi-atom.svg` e `assets/favicon.svg` — logo do vabi.dev
 
-O frame das janelas (barra de título, botões e barra de status) usa o [XP.css](https://botoxparty.github.io/XP.css/) v0.2.6, licença MIT, incluído localmente em `assets/xp/`. Fora isso, não há backend nem dependências externas. Basta hospedar a pasta como um site estático.
+Fontes do Google Fonts (Unbounded, Instrument Serif, Manrope e JetBrains Mono). Fora isso, não há backend nem dependências: basta hospedar a pasta como site estático. As animações respeitam `prefers-reduced-motion`.
 
 ## Projetos exibidos
 
+- Lar Feliz Animal — repositório público e aplicação no ar
 - Nexumpedia — repositório público
-- Lar Feliz Animal — repositório público e aplicação publicada
 - Fila Zero — repositório público
 - SINEP — repositório privado
 - OrbisLink — repositório privado
